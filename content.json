@@ -1,0 +1,615 @@
+{
+  "metadata": [
+    {
+      "key": "project_name",
+      "value": "rorymon"
+    },
+    {
+      "key": "named_after",
+      "value": "Rory"
+    },
+    {
+      "key": "schema_version",
+      "value": "1"
+    },
+    {
+      "key": "setting",
+      "value": "Alaska/Canada-inspired sub-polar taiga"
+    },
+    {
+      "key": "nature_boost",
+      "value": "1.1"
+    },
+    {
+      "key": "nature_penalty",
+      "value": "0.9"
+    },
+    {
+      "key": "stat_formula_status",
+      "value": "unassigned"
+    },
+    {
+      "key": "scope",
+      "value": "No inherited variation or training bonuses yet"
+    }
+  ],
+  "types": [
+    {
+      "id": "grass",
+      "name": "Grass"
+    },
+    {
+      "id": "normal",
+      "name": "Normal"
+    },
+    {
+      "id": "ground",
+      "name": "Ground"
+    }
+  ],
+  "species": [
+    {
+      "id": "mossmoose",
+      "name": "Mossmoose",
+      "stage": 1,
+      "description": "Stocky grumpy calf, oversized hooves, leafy antler buds and moss cape.",
+      "hp": null,
+      "attack": null,
+      "defense": null,
+      "special_attack": null,
+      "special_defense": null,
+      "speed": null,
+      "stats_status": "unassigned",
+      "growth_rate": null,
+      "design_status": "approved"
+    },
+    {
+      "id": "branchler",
+      "name": "Branchler",
+      "stage": 2,
+      "description": "Lanky adolescent, branching antlers with green shoots, narrow moss mantle.",
+      "hp": null,
+      "attack": null,
+      "defense": null,
+      "special_attack": null,
+      "special_defense": null,
+      "speed": null,
+      "stats_status": "unassigned",
+      "growth_rate": null,
+      "design_status": "approved"
+    },
+    {
+      "id": "taigant",
+      "name": "Taigant",
+      "stage": 3,
+      "description": "Massive forest guardian, broad palmate antlers carrying conifers and thick moss mantle.",
+      "hp": null,
+      "attack": null,
+      "defense": null,
+      "special_attack": null,
+      "special_defense": null,
+      "speed": null,
+      "stats_status": "unassigned",
+      "growth_rate": null,
+      "design_status": "approved"
+    }
+  ],
+  "species_types": [
+    {
+      "species_id": "mossmoose",
+      "slot": 1,
+      "type_id": "grass"
+    },
+    {
+      "species_id": "branchler",
+      "slot": 1,
+      "type_id": "grass"
+    },
+    {
+      "species_id": "taigant",
+      "slot": 1,
+      "type_id": "grass"
+    }
+  ],
+  "abilities": [],
+  "species_abilities": [],
+  "natures": [
+    {
+      "id": "bold",
+      "name": "Bold",
+      "increased_stat": "defense",
+      "decreased_stat": "attack"
+    },
+    {
+      "id": "timid",
+      "name": "Timid",
+      "increased_stat": "speed",
+      "decreased_stat": "attack"
+    },
+    {
+      "id": "modest",
+      "name": "Modest",
+      "increased_stat": "special_attack",
+      "decreased_stat": "attack"
+    },
+    {
+      "id": "adamant",
+      "name": "Adamant",
+      "increased_stat": "attack",
+      "decreased_stat": "special_attack"
+    },
+    {
+      "id": "calm",
+      "name": "Calm",
+      "increased_stat": "special_defense",
+      "decreased_stat": "attack"
+    },
+    {
+      "id": "hardy",
+      "name": "Hardy",
+      "increased_stat": null,
+      "decreased_stat": null
+    }
+  ],
+  "moves": [
+    {
+      "id": "tackle",
+      "name": "Tackle",
+      "type_id": "normal",
+      "category": "physical",
+      "power": null,
+      "accuracy": null,
+      "max_pp": null,
+      "priority": null,
+      "description": "Basic dependable attack.",
+      "effects_json": "[]",
+      "origin": "pokemon_inspired",
+      "inclusion_status": "approved",
+      "mechanics_status": "numeric_details_pending"
+    },
+    {
+      "id": "growl",
+      "name": "Growl",
+      "type_id": "normal",
+      "category": "status",
+      "power": null,
+      "accuracy": null,
+      "max_pp": null,
+      "priority": null,
+      "description": "Lowers opponent Attack.",
+      "effects_json": "[]",
+      "origin": "pokemon_inspired",
+      "inclusion_status": "approved",
+      "mechanics_status": "numeric_details_pending"
+    },
+    {
+      "id": "leaf_peck",
+      "name": "Leaf Peck",
+      "type_id": "grass",
+      "category": "physical",
+      "power": 40,
+      "accuracy": 100,
+      "max_pp": 30,
+      "priority": null,
+      "description": "Jab with leafy antlers.",
+      "effects_json": "[]",
+      "origin": "original",
+      "inclusion_status": "approved",
+      "mechanics_status": "approved_core_priority_pending"
+    },
+    {
+      "id": "growth",
+      "name": "Growth",
+      "type_id": "normal",
+      "category": "status",
+      "power": null,
+      "accuracy": null,
+      "max_pp": null,
+      "priority": null,
+      "description": "Builds offensive strength.",
+      "effects_json": "[]",
+      "origin": "pokemon_inspired",
+      "inclusion_status": "approved",
+      "mechanics_status": "numeric_details_pending"
+    },
+    {
+      "id": "leech_seed",
+      "name": "Leech Seed",
+      "type_id": "grass",
+      "category": "status",
+      "power": null,
+      "accuracy": null,
+      "max_pp": null,
+      "priority": null,
+      "description": "Seeds drain health over time.",
+      "effects_json": "[]",
+      "origin": "pokemon_inspired",
+      "inclusion_status": "approved",
+      "mechanics_status": "numeric_details_pending"
+    },
+    {
+      "id": "bough_rush",
+      "name": "Bough Rush",
+      "type_id": "grass",
+      "category": "physical",
+      "power": 65,
+      "accuracy": 100,
+      "max_pp": 20,
+      "priority": null,
+      "description": "Running antler strike; 30% chance to raise user Speed one stage after a successful hit.",
+      "effects_json": "[{\"trigger\": \"after_successful_hit\", \"target\": \"self\", \"stat\": \"speed\", \"stages\": 1, \"chance\": 0.3}]",
+      "origin": "original",
+      "inclusion_status": "approved",
+      "mechanics_status": "approved_core_priority_pending"
+    },
+    {
+      "id": "stomp",
+      "name": "Stomp",
+      "type_id": "normal",
+      "category": "physical",
+      "power": null,
+      "accuracy": null,
+      "max_pp": null,
+      "priority": null,
+      "description": "Hoof strike that may cause flinching.",
+      "effects_json": "[]",
+      "origin": "pokemon_inspired",
+      "inclusion_status": "approved",
+      "mechanics_status": "numeric_details_pending"
+    },
+    {
+      "id": "razor_leaf",
+      "name": "Razor Leaf",
+      "type_id": "grass",
+      "category": "physical",
+      "power": null,
+      "accuracy": null,
+      "max_pp": null,
+      "priority": null,
+      "description": "Leaf attack with increased critical-hit chance.",
+      "effects_json": "[]",
+      "origin": "pokemon_inspired",
+      "inclusion_status": "approved",
+      "mechanics_status": "numeric_details_pending"
+    },
+    {
+      "id": "synthesis",
+      "name": "Synthesis",
+      "type_id": "grass",
+      "category": "status",
+      "power": null,
+      "accuracy": null,
+      "max_pp": null,
+      "priority": null,
+      "description": "Restores health.",
+      "effects_json": "[]",
+      "origin": "pokemon_inspired",
+      "inclusion_status": "approved",
+      "mechanics_status": "numeric_details_pending"
+    },
+    {
+      "id": "take_down",
+      "name": "Take Down",
+      "type_id": "normal",
+      "category": "physical",
+      "power": null,
+      "accuracy": null,
+      "max_pp": null,
+      "priority": null,
+      "description": "Strong charge with recoil.",
+      "effects_json": "[]",
+      "origin": "pokemon_inspired",
+      "inclusion_status": "approved",
+      "mechanics_status": "numeric_details_pending"
+    },
+    {
+      "id": "canopy_crash",
+      "name": "Canopy Crash",
+      "type_id": "grass",
+      "category": "physical",
+      "power": 90,
+      "accuracy": 100,
+      "max_pp": 10,
+      "priority": null,
+      "description": "Heavy antler sweep; lowers user Speed one stage after dealing damage.",
+      "effects_json": "[{\"trigger\": \"after_damage_dealt\", \"target\": \"self\", \"stat\": \"speed\", \"stages\": -1, \"chance\": 1.0}]",
+      "origin": "original",
+      "inclusion_status": "approved",
+      "mechanics_status": "approved_core_priority_pending"
+    },
+    {
+      "id": "ingrain",
+      "name": "Ingrain",
+      "type_id": "grass",
+      "category": "status",
+      "power": null,
+      "accuracy": null,
+      "max_pp": null,
+      "priority": null,
+      "description": "Roots user for gradual healing; prevents ordinary switching.",
+      "effects_json": "[]",
+      "origin": "pokemon_inspired",
+      "inclusion_status": "approved",
+      "mechanics_status": "numeric_details_pending"
+    },
+    {
+      "id": "horn_leech",
+      "name": "Horn Leech",
+      "type_id": "grass",
+      "category": "physical",
+      "power": null,
+      "accuracy": null,
+      "max_pp": null,
+      "priority": null,
+      "description": "Heals user based on damage dealt.",
+      "effects_json": "[]",
+      "origin": "pokemon_inspired",
+      "inclusion_status": "approved",
+      "mechanics_status": "numeric_details_pending"
+    },
+    {
+      "id": "earthquake",
+      "name": "Earthquake",
+      "type_id": "ground",
+      "category": "physical",
+      "power": null,
+      "accuracy": null,
+      "max_pp": null,
+      "priority": null,
+      "description": "Powerful Ground attack.",
+      "effects_json": "[]",
+      "origin": "pokemon_inspired",
+      "inclusion_status": "approved",
+      "mechanics_status": "numeric_details_pending"
+    },
+    {
+      "id": "wood_hammer",
+      "name": "Wood Hammer",
+      "type_id": "grass",
+      "category": "physical",
+      "power": null,
+      "accuracy": null,
+      "max_pp": null,
+      "priority": null,
+      "description": "Very powerful Grass attack with recoil.",
+      "effects_json": "[]",
+      "origin": "pokemon_inspired",
+      "inclusion_status": "approved",
+      "mechanics_status": "numeric_details_pending"
+    }
+  ],
+  "evolutions": [
+    {
+      "from_species": "mossmoose",
+      "to_species": "branchler",
+      "minimum_level": 16,
+      "status": "approved"
+    },
+    {
+      "from_species": "branchler",
+      "to_species": "taigant",
+      "minimum_level": 36,
+      "status": "approved"
+    }
+  ],
+  "learnsets": [
+    {
+      "species_id": "mossmoose",
+      "move_id": "tackle",
+      "method": "level",
+      "level": 1
+    },
+    {
+      "species_id": "mossmoose",
+      "move_id": "growl",
+      "method": "level",
+      "level": 1
+    },
+    {
+      "species_id": "mossmoose",
+      "move_id": "leaf_peck",
+      "method": "level",
+      "level": 5
+    },
+    {
+      "species_id": "mossmoose",
+      "move_id": "growth",
+      "method": "level",
+      "level": 9
+    },
+    {
+      "species_id": "mossmoose",
+      "move_id": "leech_seed",
+      "method": "level",
+      "level": 13
+    },
+    {
+      "species_id": "branchler",
+      "move_id": "tackle",
+      "method": "level",
+      "level": 1
+    },
+    {
+      "species_id": "branchler",
+      "move_id": "growl",
+      "method": "level",
+      "level": 1
+    },
+    {
+      "species_id": "branchler",
+      "move_id": "leaf_peck",
+      "method": "level",
+      "level": 5
+    },
+    {
+      "species_id": "branchler",
+      "move_id": "growth",
+      "method": "level",
+      "level": 9
+    },
+    {
+      "species_id": "branchler",
+      "move_id": "leech_seed",
+      "method": "level",
+      "level": 13
+    },
+    {
+      "species_id": "branchler",
+      "move_id": "stomp",
+      "method": "level",
+      "level": 20
+    },
+    {
+      "species_id": "branchler",
+      "move_id": "razor_leaf",
+      "method": "level",
+      "level": 25
+    },
+    {
+      "species_id": "branchler",
+      "move_id": "synthesis",
+      "method": "level",
+      "level": 30
+    },
+    {
+      "species_id": "branchler",
+      "move_id": "take_down",
+      "method": "level",
+      "level": 34
+    },
+    {
+      "species_id": "taigant",
+      "move_id": "tackle",
+      "method": "level",
+      "level": 1
+    },
+    {
+      "species_id": "taigant",
+      "move_id": "growl",
+      "method": "level",
+      "level": 1
+    },
+    {
+      "species_id": "taigant",
+      "move_id": "leaf_peck",
+      "method": "level",
+      "level": 5
+    },
+    {
+      "species_id": "taigant",
+      "move_id": "growth",
+      "method": "level",
+      "level": 9
+    },
+    {
+      "species_id": "taigant",
+      "move_id": "leech_seed",
+      "method": "level",
+      "level": 13
+    },
+    {
+      "species_id": "taigant",
+      "move_id": "stomp",
+      "method": "level",
+      "level": 20
+    },
+    {
+      "species_id": "taigant",
+      "move_id": "razor_leaf",
+      "method": "level",
+      "level": 25
+    },
+    {
+      "species_id": "taigant",
+      "move_id": "synthesis",
+      "method": "level",
+      "level": 30
+    },
+    {
+      "species_id": "taigant",
+      "move_id": "take_down",
+      "method": "level",
+      "level": 34
+    },
+    {
+      "species_id": "taigant",
+      "move_id": "ingrain",
+      "method": "level",
+      "level": 40
+    },
+    {
+      "species_id": "taigant",
+      "move_id": "horn_leech",
+      "method": "level",
+      "level": 45
+    },
+    {
+      "species_id": "taigant",
+      "move_id": "earthquake",
+      "method": "level",
+      "level": 50
+    },
+    {
+      "species_id": "taigant",
+      "move_id": "wood_hammer",
+      "method": "level",
+      "level": 56
+    },
+    {
+      "species_id": "branchler",
+      "move_id": "bough_rush",
+      "method": "evolution",
+      "level": null
+    },
+    {
+      "species_id": "taigant",
+      "move_id": "canopy_crash",
+      "method": "evolution",
+      "level": null
+    }
+  ],
+  "assets": [
+    {
+      "id": "branchler_rear",
+      "species_id": "branchler",
+      "view": "rear",
+      "path": "assets/branchler-sprite-rear-transparent.png",
+      "status": "working_art_not_final_game_resolution"
+    },
+    {
+      "id": "mossmoose_rear",
+      "species_id": "mossmoose",
+      "view": "rear",
+      "path": "assets/mossmoose-sprite-rear-transparent.png",
+      "status": "working_art_not_final_game_resolution"
+    },
+    {
+      "id": "mossmoose_front",
+      "species_id": "mossmoose",
+      "view": "front",
+      "path": "assets/mossmoose-sprite-front-transparent.png",
+      "status": "working_art_not_final_game_resolution"
+    },
+    {
+      "id": "branchler_front",
+      "species_id": "branchler",
+      "view": "front",
+      "path": "assets/branchler-sprite-front-transparent.png",
+      "status": "working_art_not_final_game_resolution"
+    },
+    {
+      "id": "taigant_rear",
+      "species_id": "taigant",
+      "view": "rear",
+      "path": "assets/taigant-sprite-rear-transparent.png",
+      "status": "working_art_not_final_game_resolution"
+    },
+    {
+      "id": "taigant_front",
+      "species_id": "taigant",
+      "view": "front",
+      "path": "assets/taigant-front-transparent.png",
+      "status": "working_art_moss_mantle_consistency_pending"
+    }
+  ]
+}

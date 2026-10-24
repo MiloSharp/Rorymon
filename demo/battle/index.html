@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rorymon Battle Prototype</title>
+  <script>if(new URLSearchParams(location.search).has('wild'))document.documentElement.classList.add('skip-intro-mode')</script>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="game" aria-label="Rorymon battle prototype">
+    <section class="battle-shell">
+      <section id="battle-intro" class="battle-intro" aria-label="Trainer introduction">
+        <div class="intro-rays" aria-hidden="true"></div>
+        <img id="challenger-art" class="trainer-art trainer-opponent" src="../../assets/characters/artwork/npcs/young-trainer-large-art-v1.png" alt="Young Trainer Kellan">
+        <div class="versus" aria-hidden="true"><span>VS</span></div>
+        <img id="player-trainer-art" class="trainer-art trainer-player" src="../../assets/characters/artwork/players/female-trainer-large-art-hair-brown-v1.png" alt="Player trainer Mara">
+        <div class="trainer-name opponent-name"><small id="challenger-class">YOUNG TRAINER</small><strong id="challenger-name">Kellan</strong></div>
+        <div class="trainer-name player-name"><small>RORYMON TRAINER</small><strong id="player-trainer-name">Mara</strong></div>
+        <div class="intro-dialogue">
+          <p id="intro-speaker" class="speaker">Kellan</p>
+          <p id="intro-text">The trail taught Mossmoose a few new tricks. Want to see?</p>
+          <div class="intro-controls">
+            <span id="intro-progress">1 / 4</span>
+            <button id="intro-next">Continue <span aria-hidden="true">▶</span></button>
+          </div>
+        </div>
+        <button id="intro-skip" class="skip-intro">Skip intro</button>
+      </section>
+      <div id="battle-arena" class="arena awaiting-battle" aria-hidden="true">
+        <button id="quality-toggle" class="quality-toggle" type="button" aria-pressed="false">▦ Pixel art</button>
+        <button id="music-toggle" class="music-toggle" type="button" aria-pressed="true">♫ Music on</button>
+        <div class="hud opponent">
+          <div class="hud-top"><span id="opponent-name">Kellan's Mossmoose</span><span id="opponent-level" class="level">Lv. 5</span></div>
+          <div class="hp-row"><span class="hp-label">HP</span><div class="hp-track"><div id="opponent-hp" class="hp-fill"></div></div></div>
+          <div id="opponent-hp-text" class="hp-text">44 / 44</div>
+          <div id="opponent-team" class="team-status" aria-label="Kellan's team"></div>
+        </div>
+        <div class="platform opponent"></div>
+        <img id="opponent-sprite" class="combatant opponent-sprite" src="../../assets/mossmoose-sprite-front-transparent.png" alt="Kellan's Mossmoose">
+        <div id="capture-ball" class="capture-ball" hidden><span></span></div>
+        <div id="capture-stars" class="capture-stars" hidden><i>✦</i><i>✦</i><i>✦</i><i>✦</i><i>✦</i><i>✦</i></div>
+        <div class="hud player">
+          <div class="hud-top"><span id="player-name">Mossmoose</span><span id="player-level" class="level">Lv. 5</span></div>
+          <div class="hp-row"><span class="hp-label">HP</span><div class="hp-track"><div id="player-hp" class="hp-fill"></div></div></div>
+          <div id="player-hp-text" class="hp-text">44 / 44</div>
+          <div class="exp-row"><span>EXP</span><div class="exp-track"><div id="player-exp" class="exp-fill"></div></div><span id="player-exp-text">50 / 100</span></div>
+          <div id="player-team" class="team-status" aria-label="Mara's team"></div>
+        </div>
+        <div class="platform player"></div>
+        <img id="player-sprite" class="combatant player-sprite" src="../../assets/mossmoose-sprite-rear-transparent.png" alt="Player's Mossmoose">
+        <div id="exp-summary" class="exp-summary" hidden>
+          <strong id="exp-title">Mossmoose gained 65 EXP!</strong>
+          <span id="level-message"></span>
+        </div>
+      </div>
+      <div id="battle-panel" class="panel awaiting-battle" aria-hidden="true">
+        <div class="message">
+          <div class="prompt-row"><h1 id="battle-prompt">What will Mossmoose do?</h1><span id="turn-number" class="turn">Turn 1</span></div>
+          <p id="battle-log" role="status" aria-live="polite"></p>
+          <div class="message-actions">
+            <button id="switch-open" type="button">Switch</button>
+            <div id="throw-actions" class="throw-actions" hidden>
+              <button id="throw-open" type="button" aria-expanded="false" aria-controls="ball-choices">Throw</button>
+              <div id="ball-choices" class="ball-choices" hidden>
+                <button id="catch-rorymon" type="button" hidden></button>
+                <button id="catch-ultra" type="button" hidden></button>
+                <button id="catch-quick" type="button" hidden></button>
+              </div>
+            </div>
+            <button id="run-away" type="button" hidden>Run Away</button>
+            <button id="restart" hidden>Battle again</button>
+            <button id="return-overworld" hidden>Return to overworld</button>
+          </div>
+        </div>
+        <div id="move-grid" class="moves" aria-label="Moves"></div>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="./app.js?v=20261005j"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pgpass
+
+# Dependencies, generated reports, and logs
+node_modules/
+coverage/
+dist/
+build/
+*.log
+
+# Local database exports
+*.backup
+*.dump
+*.sqlite
+*.sqlite3
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~

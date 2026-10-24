@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rorymon Overworld Prototype</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header>
+      <div><strong>Sprucewater Trail</strong><span id="terrain-label">Trail</span></div>
+      <div class="controls"><span>Move: WASD / Arrows</span><span>Run: Shift</span><button id="profile-button" type="button">Player</button><button id="open-party" type="button">View party</button><a class="editor-link" href="../editor/index.html">Rorydex Editor</a><span id="party-count">Party: 3/6</span><span id="collection-count">Caught: 0</span><span id="storage-count">Storage: 0</span><span id="credit-count">Credits: 500</span><span id="ball-count">Roryballs: 5</span></div>
+    </header>
+    <section class="viewport" aria-label="Rorymon overworld">
+      <canvas id="world" width="768" height="512"></canvas>
+      <div id="healing-ball" class="healing-ball" hidden><span></span></div>
+      <div id="attendant-pop" class="attendant-pop" hidden>
+        <img id="attendant-portrait" alt="">
+        <div class="attendant-message"><strong id="attendant-name"></strong><span id="attendant-line"></span></div>
+      </div>
+      <div class="location-card" id="location-card"><strong>Sprucewater Trail</strong><span>Explore the tall grass to find wild Rorymon.</span></div>
+      <div class="encounter" id="encounter" hidden>
+        <div class="encounter-flash"></div>
+        <div class="encounter-card">
+          <small>WILD ENCOUNTER</small>
+          <h1 id="encounter-name">Something is rustling!</h1>
+          <p>Your party is ready. Enter the battle or keep exploring.</p>
+          <div><button id="enter-battle">Enter battle</button><button id="dismiss-encounter">Keep exploring</button></div>
+        </div>
+      </div>
+      <div class="party-screen" id="party-screen" hidden>
+        <section class="party-window" role="dialog" aria-modal="true" aria-labelledby="party-title">
+          <div class="party-heading"><div><small>YOUR TEAM</small><h1 id="party-title">Rorymon Party</h1></div><button id="close-party" type="button" aria-label="Close party">×</button></div>
+          <div class="party-list" id="party-list"></div>
+          <div class="storage-heading"><small>STORAGE BOX</small><h2>Stored Rorymon</h2><span id="storage-summary">0 stored</span></div>
+          <div class="storage-list" id="storage-list"></div>
+        </section>
+      </div>
+      <div class="shop-screen" id="shop-screen" hidden>
+        <section class="shop-window" role="dialog" aria-modal="true" aria-labelledby="shop-title">
+          <div class="party-heading"><div><small>SPRUCEWATER STORE</small><h1 id="shop-title">Roryball Counter</h1></div><button id="close-shop" type="button" aria-label="Close store">×</button></div>
+          <div class="shop-item"><div class="shop-ball"><span></span></div><div><h2>Roryball ×5</h2><p>A bundle of five standard Roryballs.</p></div><button id="buy-roryballs" type="button">Buy · 100 credits</button></div>
+          <div class="shop-item"><div class="shop-ball ultra"><span></span></div><div><h2>Ultraroryball ×3</h2><p>Twice the normal capture strength.</p></div><button id="buy-ultraroryballs" type="button">Buy · 300 credits</button></div>
+          <div class="shop-item"><div class="shop-ball quick"><span></span></div><div><h2>Quickroryball ×3</h2><p>Best on the first turn of a wild battle.</p></div><button id="buy-quickroryballs" type="button">Buy · 240 credits</button></div>
+          <p id="shop-message">Welcome! Stock up before heading into the tall grass.</p>
+        </section>
+      </div>
+      <div class="profile-screen" id="profile-screen" hidden>
+        <section class="profile-window" role="dialog" aria-modal="true" aria-labelledby="profile-title">
+          <div class="profile-heading"><div><small>PLAYER PROFILES</small><h1 id="profile-title">Who is playing?</h1></div><button id="close-profiles" type="button" aria-label="Close profiles">×</button></div>
+          <div id="profile-list" class="profile-list"></div>
+          <button id="new-profile" class="new-profile" type="button">＋ New player</button>
+          <form id="profile-form" class="profile-form" hidden>
+            <label>Character name<input id="character-name" maxlength="18" autocomplete="off" required placeholder="Enter a name"></label>
+            <fieldset><legend>1. Choose Boy or Girl</legend><div id="body-choices" class="body-choices"></div></fieldset>
+            <fieldset><legend>2. Choose hair color</legend><div id="hair-choices" class="hair-choices"></div></fieldset>
+            <p id="profile-error" class="profile-error" aria-live="polite"></p>
+            <div class="profile-actions"><button id="cancel-profile" type="button">Cancel</button><button type="submit">Start adventure</button></div>
+          </form>
+        </section>
+      </div>
+    </section>
+    <footer><span id="status">Walk into the tall grass to search for Rorymon.</span><a href="../battle/?battle=1">Open battle demo</a></footer>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
